@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1edfac1-bfb8-45a5-b029-e33360b80ed1" name="Changes" comment="test">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/up/cs/cos221/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/za/ac/up/cs/cos221/AppTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="b1edfac1-bfb8-45a5-b029-e33360b80ed1" name="Changes" comment="Source Code" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -86,8 +77,16 @@
       <workItem from="1651333911428" duration="15199000" />
       <workItem from="1651398312201" duration="24669000" />
       <workItem from="1651488000259" duration="13118000" />
-      <workItem from="1651510344810" duration="1319000" />
+      <workItem from="1651510344810" duration="1632000" />
     </task>
+    <task id="LOCAL-00001" summary="Source Code">
+      <created>1651511819268</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1651511819268</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,7 +108,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="HEAD" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>
@@ -123,6 +122,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="Source Code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Source Code" />
   </component>
 </project>
