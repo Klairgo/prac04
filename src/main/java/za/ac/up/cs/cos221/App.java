@@ -322,7 +322,7 @@ public class App
                             PreparedStatement client_address_get = connection.prepareStatement(
                                     "SELECT address_id FROM address WHERE address = ? AND city_id = ?;");
                             PreparedStatement client_create_stat = connection.prepareStatement(
-                                    "INSERT INTO customer (store_id, first_name, last_name, email, address_id, active, create_date, last_update) VALUES (?, ?, ?, ?, ?, ?, ?, ?);");
+                                    "INSERT INTO customer (store_id, first_name, last_name, email, address_id, active) VALUES (?, ?, ?, ?, ?, ?);");
                             if(client_storeid.getText() != "" && client_firstname.getText() != "" && client_lastname.getText()  != "" &&
                                     client_email.getText() != "" && client_address1.getText() != "" && client_district.getText() != "" &&
                                     client_city.getText() != "" && client_active.getText() != "" && client_date.getText() != "") {
@@ -350,8 +350,8 @@ public class App
                                 client_create_stat.setString(4, client_email.getText());
                                 client_create_stat.setString(5, client_address_id);
                                 client_create_stat.setString(6, client_active.getText());
-                                client_create_stat.setString(7, client_date.getText());
-                                client_create_stat.setString(8, client_date.getText());
+                                //client_create_stat.setString(7, client_date.getText());
+                                //client_create_stat.setString(8, client_date.getText());
                                 client_create_stat.execute();
                                 JOptionPane.showMessageDialog(null, "Success! ");
                             }

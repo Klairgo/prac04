@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1edfac1-bfb8-45a5-b029-e33360b80ed1" name="Changes" comment="Added git Support">
+    <list default="true" id="b1edfac1-bfb8-45a5-b029-e33360b80ed1" name="Changes" comment="Removed date">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/up/cs/cos221/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/up/cs/cos221/App.java" afterDir="false" />
     </list>
@@ -80,7 +80,7 @@
       <workItem from="1651333911428" duration="15199000" />
       <workItem from="1651398312201" duration="24669000" />
       <workItem from="1651488000259" duration="13118000" />
-      <workItem from="1651510344810" duration="7666000" />
+      <workItem from="1651510344810" duration="7773000" />
     </task>
     <task id="LOCAL-00001" summary="Source Code">
       <created>1651511819268</created>
@@ -96,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651512328662</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Removed date">
+      <created>1651518828664</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1651518828664</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +156,7 @@
     <MESSAGE value="test" />
     <MESSAGE value="Source Code" />
     <MESSAGE value="Added git Support" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added git Support" />
+    <MESSAGE value="Removed date" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed date" />
   </component>
 </project>
