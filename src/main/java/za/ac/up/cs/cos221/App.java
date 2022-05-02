@@ -1,28 +1,21 @@
 package za.ac.up.cs.cos221;
-import org.mariadb.jdbc.export.Prepare;
 
 import java.awt.*;
 import java.sql.*;
 import javax.swing.*;
-import java.util.Arrays;
 import java.util.regex.*;
-import javax.swing.border.Border;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     private static String driver = "jdbc:mariadb";
-    private static String host = "localhost";
+    private static String host = "";
     private static int port = 3306;
+    private static String username = "";
+    private static String password = "";
     private static String database = "u21555258_sakila";
-    private static String username = "admin";
-    private static String password = "H3c2J1@kl*#";
 
     public static void main( String[] args ) throws SQLException {
 
