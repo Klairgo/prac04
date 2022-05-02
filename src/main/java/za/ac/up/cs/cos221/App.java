@@ -147,7 +147,7 @@ public class App
                     final JTextField film_replacecost = new JTextField(30);
                     final JTextField film_rating = new JTextField(30);
                     final JTextField film_feature = new JTextField(30);
-                    final JTextField film_date = new JTextField(30);
+                    //final JTextField film_date = new JTextField(30);
                     films_input.add(new JLabel("Title: "));
                     films_input.add(film_title);
                     films_input.add(new JLabel("Description: "));
@@ -168,8 +168,8 @@ public class App
                     films_input.add(film_rating);
                     films_input.add(new JLabel("Special Features: [Trailers, Commentaries, Deleted Scene, Behind the Scenes]"));
                     films_input.add(film_feature);
-                    films_input.add(new JLabel("Date (yyyy-mm-dd hh:mm:ss) : "));
-                    films_input.add(film_date);
+                    //films_input.add(new JLabel("Date (yyyy-mm-dd hh:mm:ss) : "));
+                    //films_input.add(film_date);
 
                     films_button.addActionListener(new java.awt.event.ActionListener() {
                         @Override
@@ -178,11 +178,11 @@ public class App
                             try {
                                 Connection connection = DriverManager.getConnection(url, username, password);
                                 PreparedStatement film_insert = connection.prepareStatement(
-                                "INSERT INTO film (title, description, release_year, language_id, rental_duration, rental_rate, length, replacement_cost, rating, special_features, last_update) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);");
+                                "INSERT INTO film (title, description, release_year, language_id, rental_duration, rental_rate, length, replacement_cost, rating, special_features) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);");
                                 PreparedStatement film_get = connection.prepareStatement(
                                         "SELECT film_id, title, release_year, rental_duration, rental_rate, replacement_cost, rating FROM film;");
-                                if(film_title.getText() != "" && (film_feature.getText() == "Trailers" || film_feature.getText()  == "Commentaries" ||
-                                   film_feature.getText() == "Deleted Scene" || film_feature.getText() == "Behind the Scenes")) {
+                                if(film_title.getText() != "" && (film_feature.getText().equals("Trailers") || film_feature.getText().equals("Commentaries") ||
+                                        film_feature.getText().equals("Deleted Scene") || film_feature.getText().equals("Behind the Scenes"))) {
 
                                     film_insert.setString(1, film_title.getText());
                                     film_insert.setString(2, film_desc.getText());
@@ -194,7 +194,7 @@ public class App
                                     film_insert.setString(8, film_replacecost.getText());
                                     film_insert.setString(9, film_rating.getText());
                                     film_insert.setString(10, film_feature.getText());
-                                    film_insert.setString(11, film_date.getText());
+                                    //film_insert.setString(11, film_date.getText());
                                     film_insert.execute();
                                     films_table_model.setRowCount(0);
                                     film_get.execute();
@@ -306,8 +306,8 @@ public class App
                 create_client.add(client_phone);
                 create_client.add(new Label("Active status (1/0)"));
                 create_client.add(client_active);
-                create_client.add(new Label("Current Date (yyyy-mm-dd hh:mm:ss)"));
-                create_client.add(client_date);
+                //create_client.add(new Label("Current Date (yyyy-mm-dd hh:mm:ss)"));
+                //create_client.add(client_date);
 
 
 
@@ -318,7 +318,7 @@ public class App
                         try {
                             Connection connection = DriverManager.getConnection(url, username, password);
                             PreparedStatement client_address_stat = connection.prepareStatement(
-                                    "INSERT INTO address (address, address2, district, city_id, postal_code, phone, last_update) VALUES (?, ?, ?, ?, ?, ?, ?);");
+                                    "INSERT INTO address (address, address2, district, city_id, postal_code, phone) VALUES (?, ?, ?, ?, ?, ?);");
                             PreparedStatement client_address_get = connection.prepareStatement(
                                     "SELECT address_id FROM address WHERE address = ? AND city_id = ?;");
                             PreparedStatement client_create_stat = connection.prepareStatement(
@@ -333,7 +333,7 @@ public class App
                                 client_address_stat.setString(4, client_city.getText());
                                 client_address_stat.setString(5, client_postal.getText());
                                 client_address_stat.setString(6, client_phone.getText());
-                                client_address_stat.setString(7, client_date.getText());
+                                //client_address_stat.setString(7, client_date.getText());
                                 client_address_stat.execute();
 
 
