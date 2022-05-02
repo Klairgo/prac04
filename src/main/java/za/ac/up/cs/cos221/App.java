@@ -377,8 +377,8 @@ public class App
                 update_client.add(update_attribute);
                 update_client.add(new Label("New Value: "));
                 update_client.add(update_value);
-                update_client.add(new Label("Current date: (yyyy-mm-dd hh:mm:ss)"));
-                update_client.add(update_date);
+                //update_client.add(new Label("Current date: (yyyy-mm-dd hh:mm:ss)"));
+                //update_client.add(update_date);
 
 
                 client_update.addActionListener(new java.awt.event.ActionListener(){
@@ -411,7 +411,7 @@ public class App
                             if(is_address_update && update_client_email.getText() != "" && update_value.getText() != "" && update_date.getText() != "") {
 
                                 PreparedStatement client_update_address = connection.prepareStatement(
-                                        "UPDATE (customer INNER JOIN address ON customer.address_id = address.address_id) SET " + update_attribute.getText() + " = ?, customer.last_update = ?, address.last_update = ? WHERE customer.customer_id = ?;");
+                                        "UPDATE (customer INNER JOIN address ON customer.address_id = address.address_id) SET " + update_attribute.getText() + " = ? WHERE customer.customer_id = ?;");
 
                                 client_get_id.setString(1, update_client_email.getText());
                                 client_get_id.execute();
@@ -419,11 +419,11 @@ public class App
                                 client_id_result.next();
                                 String client_update_id = client_id_result.getString("customer_id");
                                 System.out.println(client_update_id);
-                                client_update_address.setString(1, update_attribute.getText());
+                                //client_update_address.setString(1, update_attribute.getText());
                                 client_update_address.setString(1, update_value.getText());
-                                client_update_address.setString(2, update_date.getText());
-                                client_update_address.setString(3, update_date.getText());
-                                client_update_address.setString(4, client_update_id);
+                                //client_update_address.setString(2, update_date.getText());
+                                //client_update_address.setString(3, update_date.getText());
+                                client_update_address.setString(2, client_update_id);
                                 client_update_address.execute();
 
                                 JOptionPane.showMessageDialog(null, "Success! Updated: " + update_attribute.getText());
@@ -431,7 +431,7 @@ public class App
                             else if(is_client_update && update_client_email.getText() != "" && update_value.getText() != "" && update_date.getText() != ""){
 
                                 PreparedStatement client_update_client = connection.prepareStatement(
-                                        "UPDATE customer SET " + update_attribute.getText() + " = ?, last_update = ? WHERE customer_id = ?;");
+                                        "UPDATE customer SET " + update_attribute.getText() + " = ? WHERE customer_id = ?;");
                                 client_get_id.setString(1, update_client_email.getText());
                                 client_get_id.execute();
                                 ResultSet client_id_result = client_get_id.getResultSet();
@@ -440,8 +440,8 @@ public class App
 
                                 //client_update_client.setString(1, update_attribute.getText());
                                 client_update_client.setString(1, update_value.getText());
-                                client_update_client.setString(2, update_date.getText());
-                                client_update_client.setString(3, client_update_id);
+                                //client_update_client.setString(2, update_date.getText());
+                                client_update_client.setString(2, client_update_id);
                                 client_update_client.execute();
 
                                 JOptionPane.showMessageDialog(null, "Success! Updated: " + update_attribute.getText());
