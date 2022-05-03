@@ -71,7 +71,6 @@ public class App
                 }
 
 
-                //staff.setLayout(new BoxLayout(staff, BoxLayout.PAGE_AXIS));
                 staff.setLayout(new BorderLayout());
                 JScrollPane staff_scroll = new JScrollPane(staff_box);
                 staff_scroll.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
@@ -140,7 +139,6 @@ public class App
                     final JTextField film_replacecost = new JTextField(30);
                     final JTextField film_rating = new JTextField(30);
                     final JTextField film_feature = new JTextField(30);
-                    //final JTextField film_date = new JTextField(30);
                     films_input.add(new JLabel("Title: "));
                     films_input.add(film_title);
                     films_input.add(new JLabel("Description: "));
@@ -161,8 +159,6 @@ public class App
                     films_input.add(film_rating);
                     films_input.add(new JLabel("Special Features: [Trailers, Commentaries, Deleted Scene, Behind the Scenes]"));
                     films_input.add(film_feature);
-                    //films_input.add(new JLabel("Date (yyyy-mm-dd hh:mm:ss) : "));
-                    //films_input.add(film_date);
 
                     films_button.addActionListener(new java.awt.event.ActionListener() {
                         @Override
@@ -187,7 +183,6 @@ public class App
                                     film_insert.setString(8, film_replacecost.getText());
                                     film_insert.setString(9, film_rating.getText());
                                     film_insert.setString(10, film_feature.getText());
-                                    //film_insert.setString(11, film_date.getText());
                                     film_insert.execute();
                                     films_table_model.setRowCount(0);
                                     film_get.execute();
@@ -299,8 +294,6 @@ public class App
                 create_client.add(client_phone);
                 create_client.add(new Label("Active status (1/0)"));
                 create_client.add(client_active);
-                //create_client.add(new Label("Current Date (yyyy-mm-dd hh:mm:ss)"));
-                //create_client.add(client_date);
 
 
 
@@ -326,7 +319,6 @@ public class App
                                 client_address_stat.setString(4, client_city.getText());
                                 client_address_stat.setString(5, client_postal.getText());
                                 client_address_stat.setString(6, client_phone.getText());
-                                //client_address_stat.setString(7, client_date.getText());
                                 client_address_stat.execute();
 
 
@@ -343,8 +335,6 @@ public class App
                                 client_create_stat.setString(4, client_email.getText());
                                 client_create_stat.setString(5, client_address_id);
                                 client_create_stat.setString(6, client_active.getText());
-                                //client_create_stat.setString(7, client_date.getText());
-                                //client_create_stat.setString(8, client_date.getText());
                                 client_create_stat.execute();
                                 JOptionPane.showMessageDialog(null, "Success! ");
                             }
@@ -370,8 +360,6 @@ public class App
                 update_client.add(update_attribute);
                 update_client.add(new Label("New Value: "));
                 update_client.add(update_value);
-                //update_client.add(new Label("Current date: (yyyy-mm-dd hh:mm:ss)"));
-                //update_client.add(update_date);
 
 
                 client_update.addActionListener(new java.awt.event.ActionListener(){
@@ -412,10 +400,7 @@ public class App
                                 client_id_result.next();
                                 String client_update_id = client_id_result.getString("customer_id");
                                 System.out.println(client_update_id);
-                                //client_update_address.setString(1, update_attribute.getText());
                                 client_update_address.setString(1, update_value.getText());
-                                //client_update_address.setString(2, update_date.getText());
-                                //client_update_address.setString(3, update_date.getText());
                                 client_update_address.setString(2, client_update_id);
                                 client_update_address.execute();
 
@@ -431,9 +416,7 @@ public class App
                                 client_id_result.next();
                                 String client_update_id = client_id_result.getString("customer_id");
 
-                                //client_update_client.setString(1, update_attribute.getText());
                                 client_update_client.setString(1, update_value.getText());
-                                //client_update_client.setString(2, update_date.getText());
                                 client_update_client.setString(2, client_update_id);
                                 client_update_client.execute();
 
